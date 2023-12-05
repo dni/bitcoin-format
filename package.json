@@ -1,0 +1,23 @@
+{
+  "name": "format-bitcoin",
+  "version": "1.0.0",
+  "description": "properly format bitcoin values",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dni/format-bitcoin.git"
+  },
+  "author": "dni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dni/format-bitcoin/issues"
+  },
+  "homepage": "https://github.com/dni/format-bitcoin#readme",
+  "devDependencies": {
+    "vite": "^5.0.4"
+  }
+}

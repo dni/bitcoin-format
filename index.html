@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>properly format bitcoin :)</title>
+</head>
+<body>
+    <h1>Bitcoin Formatter</h1>
+    <hr>
+    <div id="app"></div>
+    <style>
+        body {
+            background-color: #333;
+            color: #eee;
+            font-family: sans-serif;
+            font-weight: bold;
+            text-align: center;
+        }
+        .bitcoin-format {
+            font-size: 21px;
+            display: inline-block;
+            background: #111;
+            border-radius: 4px;
+            padding: 8px;
+            margin: 4px;
+        }
+        .bitcoin-format > div {
+            display: flex;
+        }
+        .bitcoin-format .zero,
+        .bitcoin-format .faded {
+            opacity: 0.66;
+        }
+        svg {
+            width: 28px !important;
+        }
+        .bitcoin-format span:hover {
+            background-color: #333;
+        }
+        .bitcoin-format span:active {
+            background-color: lightred;
+        }
+        .bitcoin-format span:focus {
+            outline: none;
+            background-color: lightblue;
+        }
+
+    </style>
+    <script type="module">
+        import BitcoinFormatter from './src/index.js';
+        const formatter = new BitcoinFormatter({
+            btc: 0.69420666,
+            onAmountChange: (amount) => {
+                console.log('amount changed: ', amount);
+            }
+        });
+        document.getElementById('app').appendChild(formatter.render());
+    </script>
+</body>
+</html>
